@@ -1,0 +1,64 @@
+@use './colors' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: $off-black;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 25px auto;
+	width: 325px;
+	height: 630px;
+	background-color: $dark-gray;
+	border-radius: 25px;
+	img {
+		margin: 25px auto;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+	}
+	&__text {
+		color: $white;
+		padding: 20px 30px;
+		font-size: 14px;
+		&-name {
+			font-size: 30px;
+			color: $white;
+		}
+		&-adress {
+			color: $primary;
+			padding: 10px;
+		}
+	}
+	&__btn {
+		padding: 15px;
+		margin: 10px 30px;
+		border-radius: 10px;
+		font-weight: 700;
+		color: $white;
+		background-color: $gray;
+		border: none;
+
+		&:hover {
+			background-color: $primary;
+			color: $off-black;
+			cursor: pointer;
+		}
+	}
+}
+.attribution{
+	text-align: center;
+	color: $white;
+}
+@media (min-width: 1440px) {
+	.card {
+		width: 375px;
+	}
+}
